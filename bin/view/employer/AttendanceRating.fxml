@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="380.0" prefWidth="360.0" styleClass="stackPane" stylesheets="@../../css/application.css" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.employer.AttendanceRatingController">
+   <children>
+      <VBox prefHeight="200.0" prefWidth="100.0">
+         <children>
+            <AnchorPane prefHeight="95.0" prefWidth="360.0">
+               <children>
+                  <Text layoutX="74.0" layoutY="42.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Your last attended staff" textAlignment="CENTER" wrappingWidth="211.813232421875">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Text>
+                  <Label fx:id="lbDate" layoutX="166.0" layoutY="59.0" text="Label" textAlignment="CENTER" />
+               </children>
+            </AnchorPane>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <AnchorPane prefHeight="120.0" prefWidth="360.0" styleClass="information" stylesheets="@../../css/application.css">
+                     <children>
+                        <ImageView fx:id="profilePic" fitHeight="81.0" fitWidth="81.0" layoutX="22.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" />
+                        <Label fx:id="lbName" layoutX="118.0" layoutY="40.0" text="Name">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lbContact" layoutX="116.0" layoutY="64.0" text="Number" />
+                        <JFXRadioButton fx:id="rbYes" layoutX="235.0" layoutY="45.0" onAction="#handleYesToggle" prefHeight="17.0" prefWidth="48.0" text="Yes">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="lbChoice" />
+                           </toggleGroup></JFXRadioButton>
+                        <Text layoutX="206.0" layoutY="28.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Did the applicant come?">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Text>
+                        <JFXRadioButton fx:id="rbNo" layoutX="235.0" layoutY="72.0" onAction="#handleNoToggle" prefHeight="17.0" prefWidth="48.0" text="No" toggleGroup="$lbChoice" />
+                     </children>
+                  </AnchorPane>
+               </children>
+            </HBox>
+            <AnchorPane prefHeight="184.0" prefWidth="360.0">
+               <children>
+                  <VBox fx:id="starRatingPane" alignment="CENTER" prefHeight="200.0" prefWidth="360.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+               </children>
+            </AnchorPane>
+         </children>
+      </VBox>
+   </children>
+</StackPane>

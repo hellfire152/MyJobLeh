@@ -1,0 +1,26 @@
+20/12/2016 - Qingning
+
+New file created: 
+
+RegisterController 
+RegisterValidation
+AccountValidation
+FeedbackValidation
+LoginController
+
+File edited: 
+EditJobController(Validate)
+FeedbackController(Validate)
+
+Issue/Error:
+ 
+nigel 
+-help to link the data base 
+	-Controller.employer-->RegisterController
+	-Controller.employer-->EditJobController
+bryan 
+-design his error message noti (dataAccess-->RegisterValidation)
+MYSELF
+-Link to the page where they choose employer or employee (RegisterController-->backbtn) 
+-compare the dates for DOB validation
+-Link for EmployeeRegisterpage

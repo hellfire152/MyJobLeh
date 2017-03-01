@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<StackPane fx:id="stackPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="380.0" prefWidth="360.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.employee.EditPersonalDialogController">
+   <children>
+      <VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="380.0" prefWidth="360.0">
+         <children>
+            <Pane prefHeight="200.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+               <children>
+                  <JFXTextField fx:id="fieldName" labelFloat="true" layoutX="56.0" layoutY="39.0" maxWidth="234.0" minWidth="185.0" prefHeight="31.0" prefWidth="234.0" promptText="Name" />
+                  <JFXDatePicker fx:id="fieldDOB" layoutX="56.0" layoutY="81.0" prefHeight="31.0" prefWidth="234.0" promptText="Date Of Birth" />
+                  <JFXRadioButton fx:id="rbMale" layoutX="83.0" layoutY="126.0" selected="true" text="Male">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="gender" />
+                     </toggleGroup></JFXRadioButton>
+                  <JFXRadioButton fx:id="rbFemale" layoutX="173.0" layoutY="126.0" text="Female" toggleGroup="$gender" />
+                  <JFXTextField fx:id="fieldMobile" layoutX="56.0" layoutY="153.0" maxWidth="234.0" minWidth="198.0" prefHeight="31.0" prefWidth="234.0" promptText="Mobile" />
+                  <JFXRadioButton fx:id="rbSingle" layoutX="56.0" layoutY="201.0" selected="true" text="Single">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="status" />
+                     </toggleGroup></JFXRadioButton>
+                  <JFXRadioButton fx:id="rbMarried" layoutX="133.0" layoutY="201.0" text="Married" toggleGroup="$status" />
+                  <JFXRadioButton fx:id="rbDivorced" layoutX="213.0" layoutY="201.0" text="Divorced" toggleGroup="$status" />
+                  <HBox layoutY="335.0" prefHeight="38.0" prefWidth="360.0">
+                     <children>
+                        <JFXButton fx:id="cancelBtn" prefHeight="64.0" prefWidth="180.0" text="Cancel" />
+                        <JFXButton fx:id="updateBtn" onAction="#handleUpdate" prefHeight="64.0" prefWidth="180.0" text="Update" />
+                     </children>
+                  </HBox>
+               </children>
+            </Pane>
+         </children>
+      </VBox>
+   </children>
+</StackPane>

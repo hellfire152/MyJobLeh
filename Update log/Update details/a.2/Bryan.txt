@@ -1,0 +1,18 @@
+Done:
+ApplyJob notifies you whenever u apply for job
+Added EditPersonalDialog.fxml for JFXDialog in profile2.fxml
+Allow popup for you to edit your details(not working fully because require database)
+
+
+Issues faced:
+1. When u click on the edit button for the about me in profile2.fxml, it uses the method loadAboutMe 
+it does not allow me to use my own button created in EditPersonalDialog.fxml, it will give me a NullPointerError, so i have 
+created a button1 that works but it does not fit with the alignment,
+2. Need of database records to be able to start on dynamic contents for Employeehome, ApplyJob and profile page(generating of resume)
+3.Scrollbar problem on home2.fxml 
+
+Still doing:
+1.Dark theme
+2.Popup notification
+3.Drawer's dropdown popup
+4.Transition

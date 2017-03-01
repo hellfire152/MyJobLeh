@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- ApplicantPage works with AddApplicationPage
+	
+	Version: a, since a
+	Author: Low Qing Ning
+ -->
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDrawersStack?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.employer.ApplicantPageController">
+   <children>
+      <HBox prefHeight="45.0" prefWidth="585.0" style="-fx-background-color: #D32F2F;">
+         <children>
+            <JFXButton fx:id="Homebtn" onAction="#handleBack" prefHeight="46.0" prefWidth="59.0" ripplerFill="#fccdd2" text="&lt;" textFill="WHITE" />
+            <Label fx:id="lbJob" prefHeight="45.0" prefWidth="27.0" text="Job" textFill="#fccdd2" />
+            <JFXButton fx:id="lbBack" layoutX="10.0" layoutY="10.0" prefHeight="45.0" prefWidth="32.0" ripplerFill="#fccdd2" text="&lt;" textFill="WHITE" />
+            <Label fx:id="lbApplicant" layoutX="69.0" layoutY="10.0" prefHeight="45.0" prefWidth="190.0" text="Pending Applicant" textFill="#fccdd2" />
+         </children>
+      </HBox>
+      <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0">
+         <children>
+            <JFXDrawersStack style="-fx-background-color: #6c6c6c;" />
+            <VBox prefHeight="400.0" prefWidth="148.0" HBox.hgrow="ALWAYS">
+               <children>
+                  <ScrollPane fx:id="ScrollPaneApplicationPage" prefHeight="294.0" prefWidth="441.0" VBox.vgrow="ALWAYS">
+                     <content>
+                        <VBox fx:id="VBoxApplication" spacing="15.0">
+                           <padding>
+                              <Insets bottom="10.0" left="10.0" top="10.0" />
+                           </padding>
+                        </VBox>
+                     </content></ScrollPane>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+</VBox>

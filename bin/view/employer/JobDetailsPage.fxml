@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Show summary of job details , used the function 
+	"edit" - edit job details, 
+	"employee" - show list of employees
+	"File Transfer"- transfer file to employees
+	"Calendar" - show the calendar for employer to see on what day which employee is free	
+	Version: a, since a
+	Author: Low Qing Ning
+ -->
+
+<?import application.Card?>
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<StackPane fx:id="stackPane" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.employer.JobDetailsPageController">
+   <children>
+      <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="426.0">
+         <children>
+            <Card prefHeight="0.0" prefWidth="426.0">
+               <children>
+                  <VBox prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <HBox>
+                           <children>
+                              <Pane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="33.0" prefWidth="426.0" style="-fx-background-color: #d32f2f;" HBox.hgrow="ALWAYS">
+                                 <children>
+                                    <Label fx:id="lbJobName" layoutX="14.0" layoutY="8.0" text="&quot;Job Name&quot;" textFill="#f2f2f2" />
+                                 </children>
+                              </Pane>
+                           </children>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </HBox>
+                        <HBox prefHeight="166.0" prefWidth="426.0" VBox.vgrow="ALWAYS">
+                           <children>
+                              <AnchorPane prefWidth="323.0" style="-fx-background-color: #FFF;" HBox.hgrow="ALWAYS">
+                                 <children>
+                                    <Label fx:id="lbJonbDetails" layoutX="20.0" layoutY="14.0" text="Job Details " />
+                                    <Label fx:id="lbWeekdayRate" layoutX="20.0" layoutY="107.0" text="Weekday Rate: " />
+                                    <Label fx:id="lbWeekendRate" layoutX="20.0" layoutY="129.0" text="Weekend / PH Rate: " />
+                                    <Label fx:id="lbAdddress" layoutX="19.0" layoutY="60.0" text="Address: " />
+                                    <Label fx:id="lbFillInJobDetails" layoutX="19.0" layoutY="31.0" prefHeight="33.0" prefWidth="288.0" text="Fill in" />
+                                    <Label fx:id="lbFillInAddress" layoutX="25.0" layoutY="77.0" prefHeight="33.0" prefWidth="271.0" text="Fill in" />
+                                    <Label fx:id="lbFillInWeekdayRate" layoutX="112.0" layoutY="106.0" prefHeight="17.0" prefWidth="37.0" text="Fill in" />
+                                    <Label fx:id="lbFillInWeekendRate" layoutX="142.0" layoutY="131.0" prefHeight="17.0" prefWidth="37.0" text="Fill in" />
+                                 </children>
+                              </AnchorPane>
+                              <VBox alignment="CENTER" prefHeight="199.0" prefWidth="107.0" style="-fx-background-color: #f44336;">
+                                 <children>
+                                    <JFXButton fx:id="editBtn" onAction="#handleEditBtn" prefHeight="75.0" prefWidth="92.0" style="-fx-background-color: #f44336;" text="Edit" textFill="WHITE" />
+                                    <JFXButton fx:id="showEmployeeBtn" layoutX="10.0" layoutY="10.0" onAction="#handleShowEmployeeBtn" prefHeight="75.0" prefWidth="95.0" style="-fx-background-color: #f44336;" text="Employee" textFill="WHITE" />
+                                    <JFXButton fx:id="fileTrannsferBtn" layoutX="10.0" layoutY="44.0" onAction="#handleFileTransferBtn" prefHeight="75.0" prefWidth="95.0" style="-fx-background-color: #f44336;" text="File Transfer" textFill="WHITE" />
+                                    <JFXButton fx:id="btnChat" onAction="#handleChat" prefHeight="75.0" prefWidth="95.0" style="-fx-background-color: #f44336;" text="Chat" textFill="WHITE" />
+                                 </children>
+                                 <padding>
+                                    <Insets top="2.0" />
+                                 </padding>
+                              </VBox>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+            </Card>
+         </children>
+      </HBox>
+   </children>
+</StackPane>

@@ -1,0 +1,48 @@
+24/12/2016 - Ver a.2:
+Changes:
+Files reorganized, packages controller.employer, controller.employee, view.employer, view.employee, css added
+swapScene supports css, new method getScene for loading an fxml to add to some pane
+
+As such:
+ApplicantPageController::initialize(),
+EmployeeHistoryCurrentController::initialize(),
+EmployeeHistoryPendingController::initialize(),
+EmployerHomeController::initialize(),
+employee.HomeController::initialize(URL arg0, ResourceBundle arg1),
+employee.ProfileController::loadPersDialog(ActionEvent event),
+Have been rewritten to use getScene
+
+Controller interface switched to an abstract class, all controllers changed to accommodate.
+getMainApp and setMainApp methods have been removed as they are now unnecessary.
+
+Renamed:
+EmployeeDisplayInformation.fxml -> DisplayEmployeeInformation.fxml
+EmployeeList.fxml -> ListOfEmployees.fxml
+SplashFXMLController.fxml -> SplashController.fxml
+darkDrawer.fxml, darkHome.fxml, drawer.fxml, drawerHistory.fxml -> DarkDrawer.fxml, DarkHome.fxml, Drawer.fxml, DrawerHistory.fxml
+layoutController.java -> HomeController.java (employee)
+All files starting with "Employer" or "Employee" have those prefixes removed
+They are placed in the appropriate .employer or .employee packages instead
+
+COMMENTS NEEDED:
+--CONTROLLERS--
+ApplyJobController.java
+EditPersonalDialogController.java
+employee.ListController.java
+employee.ProfileController.java (add for methods as well)
+employee.ProfileTimetableController.java
+employer.EditJobController.java
+employer.FeedbackController.java
+employer.FileTransferController.java
+employer.ProfileController.java
+employee.ProfileController.java
+LoginController.java (add for methods as well)
+SplashController.java
+
+--FXML FILES--
+ApplyJob.fxml
+DarkDrawer.fxml
+DarkHome.fxml
+EditPersonalDialog.fxml
+employee.Profile.fxml
+FileTransfer.fxml

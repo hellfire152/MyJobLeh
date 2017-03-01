@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- This is opened after the splash screen animation is over
+	Version: a, since a
+	Author: Bryan tan 
+	 -->
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<StackPane fx:id="stackPane" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.employee.LoginController">
+   <children>
+      <VBox fx:id="root" alignment="CENTER">
+         <children>
+            <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0">
+               <children>
+                  <Pane prefHeight="175.0" prefWidth="600.0" style="-fx-background-color: #2979FF;" />
+                  <Pane layoutX="111.0" layoutY="16.0" prefHeight="339.0" prefWidth="350.0" style="-fx-background-color: FFF;">
+                     <children>
+                        <JFXPasswordField fx:id="fxPassword" labelFloat="true" layoutX="53.0" layoutY="193.0" maxWidth="243.0" minWidth="236.0" onKeyPressed="#keyPressPassword" prefHeight="31.0" prefWidth="243.0" promptText="Password" unFocusColor="#6c6c6c">
+                           <font>
+                              <Font name="Segoe UI Light" size="14.0" />
+                           </font>
+                        </JFXPasswordField>
+                        <JFXTextField fx:id="fxEmail" labelFloat="true" layoutX="54.0" layoutY="144.0" maxWidth="243.0" minWidth="243.0" onKeyPressed="#keyPressEmail" prefHeight="25.0" prefWidth="243.0" promptText="Email" unFocusColor="#6c6c6c">
+                           <font>
+                              <Font name="Segoe UI Light" size="14.0" />
+                           </font>
+                        </JFXTextField>
+                        <Text layoutX="138.0" layoutY="110.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Login" textAlignment="CENTER" wrappingWidth="73.00000190734863">
+                           <font>
+                              <Font name="Segoe UI Light" size="21.0" />
+                           </font>
+                        </Text>
+                        <JFXButton fx:id="signUpButton" layoutX="53.0" layoutY="295.0" onAction="#handleSignUp" ripplerFill="#8fc9ff" text="Sign Up">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton id="login" fx:id="fxLoginButton" layoutX="211.0" layoutY="242.0" onAction="#handleLogin" prefHeight="36.0" prefWidth="101.0" ripplerFill="WHITE" style="-fx-background-color: #3397ff;" text="Login" textAlignment="CENTER" textFill="WHITE">
+                           <font>
+                              <Font name="Century Gothic" size="14.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXCheckBox fx:id="checkRmbMe" checkedColor="#4059a9" graphicTextGap="0.0" layoutX="34.0" layoutY="246.0" prefHeight="28.0" prefWidth="123.0" text="Remember Me" unCheckedColor="#6c6c6c" />
+                        <ImageView layoutX="140.0" layoutY="14.0">
+                           <image>
+                              <Image url="@../../../resources/images/ic_account_circle_black_24dp.png" />
+                           </image>
+                        </ImageView>
+                        <JFXButton fx:id="btnForget" layoutX="209.0" layoutY="298.0" onAction="#handleForget" ripplerFill="#8fc9ff" text="Forget password" />
+                     </children>
+                  </Pane>
+               </children>
+            </AnchorPane>
+         </children>
+      </VBox>
+   </children>
+</StackPane>

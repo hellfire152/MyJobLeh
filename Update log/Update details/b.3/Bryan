@@ -1,0 +1,20 @@
+WorkEvent model:
+New attribute added to assist my History part! 
+
+Done:
+updated the profile.fxml and profile controller
+updated on the home.fxml and home controller
+updated on the applyjob.fxml 
+included a few jar files
+added maps package
+did some changes to EmployeeAccount.java and UserAccount.java
+added AttendanceRating.fxml and AttendanceRatingController for employer side
+Made changes to EditPersonalDialogController.java
+
+Issues:
+Employee Profile page last 2 edit buttons unable to work(Still trying hard)
+maps unable to open using a button(Trying even harder)
+
+Need Integration on:
+Need to show the rating of the employee on the Applicant page of the employer side
+Need to show the skills required on the jobspane

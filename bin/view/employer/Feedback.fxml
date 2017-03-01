@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Feedback, click submit to submit feedback. 
+	
+	Version: a.1.1, since a
+	Author: Low Qing Ning
+ -->
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDrawer?>
+<?import com.jfoenix.controls.JFXHamburger?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.employer.FeedbackController">
+   <children>
+      <VBox prefHeight="500.0" prefWidth="600.0">
+         <children>
+            <HBox prefHeight="45.0" prefWidth="585.0" style="-fx-background-color: #D32F2F;">
+               <children>
+                  <JFXHamburger fx:id="fxHamburg">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </JFXHamburger>
+                  <Label alignment="CENTER" prefHeight="46.0" prefWidth="83.0" text="Feedback" textFill="#fccdd2" />
+               </children>
+            </HBox>
+            <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0">
+               <children>
+                  <VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="400.0" prefWidth="148.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <VBox maxWidth="1.7976931348623157E308" prefHeight="389.0" prefWidth="441.0" VBox.vgrow="ALWAYS">
+                           <children>
+                              <ScrollPane fx:id="ScrollPaneEmployerHome" fitToWidth="true" hbarPolicy="NEVER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="310.0" prefWidth="441.0" VBox.vgrow="ALWAYS">
+                                 <content>
+                                    <VBox fx:id="VBoxCurrent" alignment="TOP_CENTER" fillWidth="false" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" spacing="15.0">
+                                       <padding>
+                                          <Insets bottom="10.0" left="10.0" top="10.0" />
+                                       </padding>
+                                       <children>
+                                          <JFXTextField fx:id="fieldReciever" focusColor="#d32f2f" labelFloat="true" maxWidth="1139.0" minWidth="245.0" prefHeight="33.0" prefWidth="363.0" promptText="Name/Email">
+                                             <padding>
+                                                <Insets top="10.0" />
+                                             </padding>
+                                          </JFXTextField>
+                                          <JFXTextField fx:id="fieldSubject" focusColor="#d32f2f" labelFloat="true" layoutX="20.0" layoutY="20.0" maxWidth="1139.0" minWidth="245.0" prefHeight="31.0" prefWidth="363.0" promptText="Subject/Title">
+                                             <padding>
+                                                <Insets top="10.0" />
+                                             </padding>
+                                          </JFXTextField>
+                                          <JFXTextArea fx:id="areaFeedback" focusColor="#d32f2f" labelFloat="true" maxWidth="504.0" minWidth="376.0" prefHeight="175.0" prefWidth="387.0" promptText="Feedback">
+                                             <padding>
+                                                <Insets top="10.0" />
+                                             </padding>
+                                          </JFXTextArea>
+                                          <HBox prefHeight="47.0" prefWidth="387.0">
+                                             <children>
+                                                <Pane prefHeight="47.0" prefWidth="386.0">
+                                                   <children>
+                                                      <JFXButton fx:id="btnSubmit" buttonType="RAISED" layoutX="309.0" layoutY="6.0" onAction="#handleSubmit" prefHeight="40.0" prefWidth="79.0" ripplerFill="#ffcdd2" style="-fx-background-color: #fccdd2;" text="Submit" />
+                                                   </children>
+                                                </Pane>
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                    </VBox>
+                                 </content>
+                                 <VBox.margin>
+                                    <Insets />
+                                 </VBox.margin>
+                              </ScrollPane>
+                           </children>
+                        </VBox>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <JFXDrawer fx:id="fxDrawer" prefWidth="0.0" />
+   </children>
+</AnchorPane>

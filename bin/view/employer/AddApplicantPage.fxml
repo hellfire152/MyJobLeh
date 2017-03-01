@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- AddApplicantPage appends and show the list of applicants applying for the job
+	the buttons at the side are for accepting the applicant or declining the applicants 
+	
+	Version: a, since a
+	Author: Low Qing Ning
+ -->
+
+<?import application.Card?>
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<HBox xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.employer.AddApplicantPageController">
+   <children>
+      <Card maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="426.0">
+         <children>
+            <VBox prefHeight="119.0" prefWidth="426.0">
+               <children>
+                  <Pane prefHeight="49.0" prefWidth="426.0" style="-fx-background-color: #d32f2f;">
+                     <children>
+                        <Label fx:id="lbJobName" layoutX="14.0" prefHeight="39.0" prefWidth="150.0" text="&quot;Job Name&quot;" textFill="WHITE">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <AnchorPane prefHeight="85.0" prefWidth="331.0" style="-fx-background-color: #FFF;">
+                           <children>
+                              <Label fx:id="lbApplicantName" layoutX="13.0" layoutY="7.0" prefHeight="26.0" prefWidth="295.0" text="Person 1" />
+                              <Label fx:id="lbReasonsToHire" layoutX="18.0" layoutY="34.0" text="Reasons to hire" />
+                           </children>
+                        </AnchorPane>
+                        <VBox alignment="CENTER" prefHeight="127.0" prefWidth="109.0" style="-fx-background-color: #f44336;">
+                           <children>
+                              <JFXButton fx:id="Acceptbtn" onAction="#handleAcceptBtn" prefHeight="33.0" prefWidth="98.0" style="-fx-background-color: #f44336;" text="✔" textFill="WHITE" />
+                              <JFXButton fx:id="Declinebtn" onAction="#handleDeclineBtn" prefHeight="40.0" prefWidth="99.0" style="-fx-background-color: #f44336;" text="✘" textFill="WHITE" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </Card>
+   </children>
+</HBox>

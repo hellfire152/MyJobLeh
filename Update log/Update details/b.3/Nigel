@@ -1,0 +1,142 @@
+--- 1/2/2017 ---
+
+WorkEvent model:
+New attribute added to assist my History part!
+
+Session model:
+New attribute to store workEvent
+
+Employee login have remember me function.
+
+Drawer controller have been updated
+- "History" changed to "My Jobs"
+- "My Jobs added drop down "Past jobs"
+- Drawer now will have dynamic content "Email" & "Name"
+
+MyJobs Pending
+- Auto append new pane via number of content in pending
+- Display label accordingly
+- Email function to email to the employer immediately
+- Cancel will delete the whole pane as well as the corresponding job in pending database
+
+MyJobs Current
+- Display all related information for the jobs.
+- Check total pay display "Hours worked" , "Rate" & "Total salary"
+- Resignation delete whole pane as well as the corresponding job in current database
+-- TODO: Need to have a confirm box, as well as employer agreement
+- Chat function works between users that have the same job title
+- File transfer work between users that have the same job and employer. (Upload and download work)
+ 
+ MyJobs Past
+ - Display all related information for the jobs
+ - Email function to email the employer immediately
+ 
+ Security have been updated
+ - Simple Columnar cipher: Encrypt chat
+ - Caesar cipher: Encrypt remember me
+ - Hash function for password 
+ 
+*IMPORTANT*
+---Affected Classes---
+Application:
+	Session
+Controller:
+	DrawerController
+Controller.Employee:
+	ChatController
+	FileTransferController
+	FileTransferDownloadController
+	HistoryCurrentController
+	HistoryCurrentPaneController
+	HistoryPendingController
+	HistoryPendingPaneController
+	HistoryPastJobsController
+	HistoryPastJobsPaneController
+	LoginController
+	
+DataAccess:
+	ChatDAO
+	FileTransferDAO
+	RememberMeDAO
+	JobsDAO
+DataAccess.Sql:
+	JobsDAO_Sql
+
+Model:
+	Chat
+	EmailAuthenicator
+	EmailHandler
+	Security
+Model.Account:
+	EmployeeAccount - (Bryan)
+Model.Event:
+	WorkEvent
+
+View:
+	Drawer
+View.Employee:
+	Chat
+	CheckTotalPayDialog
+	FileTransfer
+	FileTransferDownload
+	HistoryCurrent
+	HistoryCurrentPane
+	HistoryPending
+	HistoryPendingPane
+	HistoryPastJobs
+	HistoryPastJobsPane
+	Login
+	
+Many new JAR file have been imported in the lib folder (For reference library)
+
+Resources folder updated:
+	chat
+	fileTransfer
+	images
+	userProfileImages
+
+---Issue---
+The login cannot auto login on remember me. =3=
+
+--- 4/2/2017 ---
+Minor changes:
+Forget password function have been implemeted
+OTP function, and then reset password in the database
+
+--- File added ---
+Controller:
+	ForgetPasswordDialogController
+View:
+	ForgetPasswordDialog
+
+--- File edited ---
+Controller.Employee:
+	Login Controller
+View.Employee:
+	Login
+dataAccess:
+	AccountDAO - updatePassword, checkEmail have been added in the DAO
+dataAccess.sql
+	AccountDAO_Sql
+	
+------------------------------------------------------------
+
+TODO: Please put forget password at employer side to thanks.
+
+5/2/2017 Ver b.3.3
+
+EDITED---
+HistoryPending&PANE controller
+HistoryCurrent&PANE controller
+HistoryPast&PANE controller
+Chat controller + view
+File transfer controller + view + DAO
+Home controller + view
+Employer Login controller + view
+ForgetPasswordDialog controller
+NEW---
+Feedback&PANE controller + view
+
+ApplyJobController // Maybe
+
+BE SURE TO ADD ALL THE JAR IN THE LIB FILE ( MAPS + EMAIL)

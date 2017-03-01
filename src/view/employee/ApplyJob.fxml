@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import application.Card?>
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<StackPane fx:id="stackPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="600.0" style="-fx-background-color: transparent;" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.employee.ApplyJobController">
+   <children>
+      <ScrollPane fitToWidth="true" hbarPolicy="NEVER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="600.0">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="500.0" prefWidth="441.0">
+               <children>
+                  <VBox alignment="TOP_CENTER" layoutX="133.0" layoutY="12.0" prefHeight="424.0" prefWidth="440.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <HBox prefHeight="45.0" prefWidth="600.0" style="-fx-background-color: #303f9f;">
+                           <children>
+                              <JFXButton fx:id="close" onAction="#handleClose" prefHeight="43.0" prefWidth="33.0" text="X" textFill="WHITE" />
+                              <Label prefHeight="38.0" prefWidth="98.0" text="Apply Job" textFill="WHITE">
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="search" promptText="Search" styleClass="search" stylesheets="@../../bin/css/application.css" HBox.hgrow="ALWAYS">
+                                 <HBox.margin>
+                                    <Insets left="20.0" top="5.0" />
+                                 </HBox.margin>
+                              </TextField>
+                              <Region HBox.hgrow="ALWAYS" />
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="46.0" prefWidth="585.0">
+                           <children>
+                              <Pane prefHeight="58.0" prefWidth="585.0" style="-fx-background-color: #3f51b5;" HBox.hgrow="ALWAYS">
+                                 <children>
+                                    <Label fx:id="lbJobTitle" layoutX="210.0" layoutY="11.0" text="RE: Part Timers Needed" textFill="WHITE">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </Pane>
+                           </children>
+                        </HBox>
+                        <VBox prefHeight="250.0" prefWidth="100.0">
+                           <children>
+                              <Pane prefHeight="250.0" prefWidth="585.0">
+                                 <children>
+                                    <Text fontSmoothingType="LCD" layoutX="14.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Gross Hourly Rate">
+                                       <font>
+                                          <Font name="Segoe UI" size="14.0" />
+                                       </font>
+                                    </Text>
+                                    <Text layoutX="9.0" layoutY="106.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Job Description">
+                                       <font>
+                                          <Font name="Segoe UI Italic" size="16.0" />
+                                       </font>
+                                    </Text>
+                                    <Label fx:id="lbNormalRate" layoutX="13.0" layoutY="39.0" prefHeight="23.0" prefWidth="127.0" text="Normal = $7.50/hour" />
+                                    <Label fx:id="lbWeekendRate" layoutX="12.0" layoutY="62.0" prefHeight="26.0" prefWidth="115.0" text="Weekends/PH = $9" />
+                                    <Text fx:id="lbDate" layoutX="416.0" layoutY="28.0" strokeType="OUTSIDE" strokeWidth="0.0" text="10 Dec 2016" />
+                                    <ImageView fx:id="companyPic" fitHeight="85.0" fitWidth="92.0" layoutX="411.0" layoutY="34.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../resources/images/Logo.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label fx:id="lbContent" layoutX="9.0" layoutY="119.0" text="- Serve food to people and prepare or serve food when required" />
+                                    <Label fx:id="lbSpecial" layoutX="14.0" layoutY="168.0" text="NIL">
+                                       <padding>
+                                          <Insets top="6.0" />
+                                       </padding>
+                                    </Label>
+                                    <Text layoutX="9.0" layoutY="162.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Special Requirements">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </Text>
+                                    <Text fx:id="lbCompany" layoutX="412.0" layoutY="136.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Lao ZarBor Pte Ltd">
+                                       <font>
+                                          <Font name="Segoe UI" size="14.0" />
+                                       </font>
+                                    </Text>
+                                    <Text layoutX="8.0" layoutY="208.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Location Name">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </Text>
+                                    <Label fx:id="lbLocation" layoutX="8.0" layoutY="214.0" text="1 Laozarbor Street, Singapore 999999">
+                                       <padding>
+                                          <Insets top="5.0" />
+                                       </padding>
+                                    </Label>
+                                 </children>
+                              </Pane>
+                           </children>
+                        </VBox>
+                        <Card prefHeight="120.0" prefWidth="585.0" style="-fx-background-color: #4059a9;">
+                           <children>
+                              <VBox prefHeight="200.0" prefWidth="100.0">
+                                 <children>
+                                    <Pane prefHeight="96.0" prefWidth="585.0" style="-fx-background-color: #303f9f;">
+                                       <children>
+                                          <Text fill="WHITE" layoutX="14.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Options">
+                                             <font>
+                                                <Font name="Segoe UI Italic" size="16.0" />
+                                             </font>
+                                          </Text>
+                                       </children>
+                                    </Pane>
+                                    <Pane prefHeight="128.0" prefWidth="585.0" style="-fx-background-color: #fff;">
+                                       <children>
+                                          <JFXButton layoutX="144.0" layoutY="28.0" onAction="#loadLocation" styleClass="locationBtn" stylesheets="@../css/application.css" text="Get Location" textFill="WHITE" />
+                                          <JFXButton layoutX="338.0" layoutY="28.0" onAction="#loadDirections" styleClass="locationBtn" stylesheets="@../css/application.css" text="Directions to Location" textFill="WHITE" />
+                                          <JFXButton fx:id="mapsBtn" layoutX="144.0" layoutY="18.0" onAction="#loadLocation" style="-fx-background-color: #303f9f;" text="Maps" textFill="WHITE" />
+                                          <JFXButton layoutX="327.0" layoutY="18.0" />
+                                       </children></Pane>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </Card>
+                        <HBox alignment="TOP_CENTER" prefHeight="61.0" prefWidth="600.0" style="-fx-background-color: #FFF;">
+                           <children>
+                              <JFXButton onAction="#loadApplyDialog" prefHeight="58.0" prefWidth="300.0" style="-fx-background-color: #303f9f;" text="Apply" textFill="WHITE" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+         </content>
+      </ScrollPane>
+   </children>
+</StackPane>

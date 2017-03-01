@@ -1,0 +1,22 @@
+28/12/2016 0 Nigel
+New file created:
+--dataAccess--
+ChatHandling.java
+Employee.java
+Employer.java
+EncryptionDecryption.java
+FileTransfer.java
+ImageUpload.java
+--resources--
+chat
+fileTransfer
+userProfileImages
+
+File edited: 
+Database.java
+ProfileController.java - Help bryan to make content dynamic
+EditPersonalDialog.java - Help bryan to make content dynamic
+
+Issue/Error
+DAO classes need to be implemented
+Most of my FXML and design need to be redesigned by bryan. Therefore swapscene are not fully implemented.

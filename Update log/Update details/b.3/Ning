@@ -1,0 +1,29 @@
+2/2/17
+New file created: 
+PendingResignationController.java
+AddPendingResignationController.java
+AddPendingResignation.fxml
+PendingResignation.fxml
+
+File edited: 
+StatisticsPie.fxml
+StatisticsBar.fxml
+StatisticsPieController.java
+StatisticsBarController.java
+HomeController.java
+Home.fxml
+
+dataAccess.sql
+JobsDAO_Sql.java
+
+Issue/Error:
+
+-----------------------------------------------------------------------------------------------------------------
+
+Qing Ning: I dont rmb what i have to change so i just change those i rmb.  
+1. Captcha is implemented on both registers (imported new fxml for that) 
+2. Both statistics pie and bar also updated alr.  (both fxml also imported as well as the controller)
+3. Jobdetailspage and home i removed the calendar.
+4. Resign button is in historycurrent. Idk if its working but i change the dao method it called cuz its wrong                        
+Qing Ning: 3. Include feedback and profile also                        
+Qing Ning: the fxml files in the above are all affected

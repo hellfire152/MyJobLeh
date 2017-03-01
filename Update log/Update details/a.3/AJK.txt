@@ -1,0 +1,21 @@
+1/1/2017 - a.3
+
+New Classes added:
+application.Session.java -> stores theme, account
+model.Theme.java -> enum for theme (css)
+model.Validator.java -> one class for all validation needs
+model.account.Availability.java -> enum for availability status
+
+Classes removed:
+in dataAccess package:
+AccountValidation.java,
+FeedbackValidation.java,
+RegisterValidation.java
+All of the above classes are now part of Validator.java
+
+Modified:
+RegisterController.java and FeedbackController.java have been modified to fit the above changes
+swapScene now edited (again) to add the css in the current theme as well;
+everything in model.account and model.event further developed
+Due to that:
+Timetable has been updated, adding event adding functionality! (not tested)

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import application.Card?>
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox prefHeight="195.0" prefWidth="450.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.employee.HomePaneController">
+   <children>
+      <Card prefHeight="197.0" prefWidth="450.0">
+         <children>
+            <VBox prefHeight="180.0" prefWidth="450.0">
+               <children>
+                  <Pane prefHeight="50.0" prefWidth="450.0" style="-fx-background-color: #303f9f;">
+                     <children>
+                        <Label fx:id="lbJobTitle" layoutX="14.0" layoutY="17.0" prefHeight="17.0" prefWidth="199.0" text="Re: Part timers needed" textFill="WHITE" />
+                        <Label fx:id="lbCompany" alignment="CENTER_RIGHT" layoutX="238.0" layoutY="17.0" prefHeight="17.0" prefWidth="199.0" text="Shin Kushiya PTE LTd" textFill="WHITE" />
+                     </children>
+                  </Pane>
+                  <Pane prefHeight="123.0" prefWidth="450.0" style="-fx-background-color: #eeeeee;">
+                     <children>
+                        <Label fx:id="lbNormalRate" layoutX="13.0" layoutY="41.0" prefHeight="30.0" prefWidth="199.0" text="Normal rate: ">
+                           <graphic>
+                              <FontAwesomeIconView fill="#3f51b5" glyphName="MONEY" size="18" wrappingWidth="30.0" />
+                           </graphic></Label>
+                        <Label fx:id="lbWeekendRate" layoutX="13.0" layoutY="71.0" prefHeight="30.0" prefWidth="199.0" text="Weekends &amp; PH rate:">
+                           <graphic>
+                              <FontAwesomeIconView fill="#3f51b5" glyphName="PLUS" size="18" wrappingWidth="30.0" />
+                           </graphic></Label>
+                        <Label fx:id="lbLocation" alignment="CENTER_RIGHT" layoutX="299.0" layoutY="8.0" prefHeight="30.0" prefWidth="132.0" text="Multiple Location">
+                           <graphic>
+                              <FontAwesomeIconView fill="#3f51b5" glyphName="MAP" size="18" wrappingWidth="30.0" />
+                           </graphic></Label>
+                        <JFXButton fx:id="btnApply" layoutX="299.0" layoutY="74.0" onAction="#loadApplyJob1" prefHeight="25.0" prefWidth="132.0" style="-fx-background-color: #3f51b1;" text="View" textFill="WHITE" />
+                        <Label fx:id="lbDate" layoutX="13.0" layoutY="8.0" prefHeight="30.0" prefWidth="199.0" text="Date">
+                           <graphic>
+                              <FontAwesomeIconView fill="#3f51b5" glyphName="CALENDAR" size="18" wrappingWidth="30.0" />
+                           </graphic></Label>
+                     </children>
+                  </Pane>
+               </children>
+            </VBox>
+         </children>
+         <VBox.margin>
+            <Insets top="20.0" />
+         </VBox.margin>
+      </Card>
+   </children>
+</VBox>

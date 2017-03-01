@@ -1,0 +1,54 @@
+27/1/2017 - Ver. b.2
+
+New package Added: model.extraWindows -> for anything that launches a new window
+
+Files added:
+model.extraWindows.ApplyJobWindow.java -> for employee, launches a new window when viewing job details
+
+Files moved:
+ApplyJob.fxml to view.employee,
+ApplyJobController.java to controller.employee
+
+Files edited:
+application.MyJobLeh::swapScene -> now returns the Controller as an Object
+
+dataAccess.sql:
+	>DatabaseAccessor.java			-> New bytesToObject method to shorten code
+	>AccountDAO_Sql.java			-> To fit the new SQL tables + shortened code
+	>JobsDAO_Sql.java				----^
+	
+controller.employee.ApplyJobController -> setWorkEvent to initialize all the various components appropriately
+controller.employee.HomeController, HomePaneController -> work dynamically + launch apply job in new window
+
+model.event.WorkEvent -> static getAllWorkArr method to... get all WorkEvents in the database!
+
+Database tables have changed as well. The "pending_employees" and "accepted_employees" columns have been removed,
+their purpose now fulfilled by the "pending_to_jobs" and the "accepted_to_jobs" junction tables.
+
+A whole bunch of methods were added to JobsDAO, thanks to the many-to-many relation between employee and jobs.
+
+pt.2, 31/1/2017
+
+Files Edited:
+
+In controller.employee:
+	>AddApplicantPageController, ApplicantPageController, ListOfEmployeesController, HomeController
+		--->All edited to work using a "baton-passing" style of logic
+	>CreateJobController
+		--->Now properly sets the dates for timetable
+	
+In model.event:
+	>ScheduledEvent
+		--->now generates a random color for itself on creation! (for timetable)
+			+color now works of HSB values, with fixed saturation and brightness, variable hue,
+			displayed as a String, with an additional float for the hue value
+			
+In model.timetable:
+	>Timetable
+		--->Now able to get data and display them properly!
+	>TimetableCell
+		--->Made code more readable with some delegate methods
+	>LegendItem
+		--->Updated to work off the float hue value
+		
+Qing Ning's and my part are now working together!

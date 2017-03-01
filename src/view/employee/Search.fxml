@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDrawer?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.employee.SearchController">
+   <children>
+      <VBox layoutX="10.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <HBox prefHeight="45.0" prefWidth="600.0" styleClass="border">
+               <children>
+                  <JFXButton fx:id="btnBack" onAction="#handleBack" prefHeight="51.0" prefWidth="52.0" text="&lt;" />
+                  <Label prefHeight="45.0" prefWidth="67.0" text="Search">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="search" focusTraversable="false" onKeyPressed="#handleSearch" pickOnBounds="false" prefHeight="30.0" prefWidth="300.0" promptText="Search" styleClass="search" stylesheets="@../../css/application.css" HBox.hgrow="ALWAYS">
+                     <HBox.margin>
+                        <Insets bottom="5.0" top="7.0" />
+                     </HBox.margin>
+                  </TextField>
+                  <Region prefHeight="45.0" prefWidth="56.0" HBox.hgrow="ALWAYS" />
+                  <ImageView fitHeight="45.0" fitWidth="54.0" pickOnBounds="true" preserveRatio="true">
+                     <HBox.margin>
+                        <Insets right="10.0" top="5.0" />
+                     </HBox.margin>
+                     <image>
+                        <Image url="@../../resources/images/test.jpg" />
+                     </image>
+                  </ImageView>
+               </children>
+               <stylesheets>
+                  <URL value="@../../css/DarkTheme.css" />
+                  <URL value="@../../../bin/css/application.css" />
+               </stylesheets>
+            </HBox>
+            <VBox prefHeight="200.0" prefWidth="600.0" VBox.vgrow="ALWAYS">
+               <children>
+                  <AnchorPane prefHeight="30.0" prefWidth="600.0" style="-fx-background-color: #3f51b1;" styleClass="border">
+                     <stylesheets>
+                        <URL value="@../../css/DarkTheme.css" />
+                        <URL value="@../../css/application.css" />
+                     </stylesheets>
+                  </AnchorPane>
+                  <BorderPane prefHeight="200.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+                     <center>
+                        <ScrollPane fitToWidth="true" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                           <content>
+                              <VBox fx:id="appendVBox" alignment="TOP_CENTER" fillWidth="false" styleClass="background" stylesheets="@../../../bin/css/application.css" />
+                           </content>
+                        </ScrollPane>
+                     </center>
+                  </BorderPane>
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+      <JFXDrawer fx:id="fxDrawer" defaultDrawerSize="190.0" prefHeight="500.0" prefWidth="0.0" />
+   </children>
+</AnchorPane>

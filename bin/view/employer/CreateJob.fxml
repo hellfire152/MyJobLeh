@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.employer.CreateJobController">
+   <top>
+      <HBox prefHeight="42.0" prefWidth="600.0" style="-fx-background-color: #D32F2F;" BorderPane.alignment="CENTER">
+         <children>
+            <JFXButton fx:id="btnBack" onAction="#handleBack" prefHeight="44.0" prefWidth="41.0" text="&lt;" textFill="WHITE" />
+            <Label fx:id="lbCreateJob" prefHeight="43.0" prefWidth="63.0" text="Create Job" textFill="WHITE">
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin>
+            </Label>
+         </children>
+      </HBox>
+   </top>
+   <center>
+      <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox alignment="TOP_CENTER" prefHeight="45.0" prefWidth="600.0" style="-fx-background-color: #D32F2F;">
+               <children>
+                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Basic Infomation">
+                     <font>
+                        <Font name="Segoe UI Light" size="18.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets top="7.0" />
+                     </HBox.margin></Text>
+               </children>
+            </HBox>
+            <HBox alignment="TOP_CENTER" prefHeight="70.0" prefWidth="200.0">
+               <children>
+                  <JFXTextField fx:id="fieldTitle" labelFloat="true" prefWidth="200.0" promptText="Job Title">
+                     <HBox.margin>
+                        <Insets right="10.0" top="15.0" />
+                     </HBox.margin>
+                  </JFXTextField>
+                  <JFXTextField fx:id="fieldAddress" labelFloat="true" layoutX="10.0" layoutY="10.0" prefWidth="200.0" promptText="Address">
+                     <HBox.margin>
+                        <Insets left="5.0" top="15.0" />
+                     </HBox.margin>
+                  </JFXTextField>
+               </children>
+            </HBox>
+            <HBox alignment="TOP_CENTER" prefHeight="50.0" prefWidth="600.0">
+               <children>
+                  <JFXTextField fx:id="fieldPosition" labelFloat="true" prefWidth="200.0" promptText="Position">
+                     <HBox.margin>
+                        <Insets right="10.0" />
+                     </HBox.margin>
+                  </JFXTextField>
+                  <JFXTextField fx:id="fieldMinimumAge" labelFloat="true" prefWidth="200.0" promptText="Minimum Age">
+                     <HBox.margin>
+                        <Insets left="5.0" />
+                     </HBox.margin>
+                  </JFXTextField>
+               </children>
+            </HBox>
+            <HBox alignment="TOP_CENTER" prefHeight="45.0" prefWidth="200.0" style="-fx-background-color: #D32F2F;">
+               <children>
+                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Job Related Info">
+                     <font>
+                        <Font name="Segoe UI Light" size="18.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets top="7.0" />
+                     </HBox.margin>
+                  </Text>
+               </children>
+            </HBox>
+            <HBox alignment="TOP_CENTER" layoutX="10.0" layoutY="80.0" prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <JFXTextArea fx:id="areaJobScope" labelFloat="true" minWidth="317.0" prefHeight="100.0" prefWidth="280.0" promptText="Job Scope">
+                     <HBox.margin>
+                        <Insets top="20.0" />
+                     </HBox.margin>
+                  </JFXTextArea>
+                  <VBox prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <JFXTextField fx:id="fieldWeekdayRate" labelFloat="true" prefWidth="200.0" promptText="Weekday Rate">
+                           <VBox.margin>
+                              <Insets top="10.0" />
+                           </VBox.margin>
+                        </JFXTextField>
+                        <JFXTextField fx:id="fieldWeekendRate" prefWidth="200.0" promptText="Weekend Rate">
+                           <VBox.margin>
+                              <Insets top="10.0" />
+                           </VBox.margin>
+                        </JFXTextField>
+                        <JFXDatePicker fx:id="fieldStartDate" defaultColor="#303f9f" promptText="Start Date">
+                           <VBox.margin>
+                              <Insets top="10.0" />
+                           </VBox.margin>
+                        </JFXDatePicker>
+                        <JFXDatePicker fx:id="fieldEndDate" defaultColor="#303f9f" layoutX="10.0" layoutY="72.0" promptText="End Date">
+                           <VBox.margin>
+                              <Insets top="10.0" />
+                           </VBox.margin>
+                        </JFXDatePicker>
+                     </children>
+                     <HBox.margin>
+                        <Insets top="15.0" />
+                     </HBox.margin>
+                  </VBox>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox alignment="TOP_CENTER" prefHeight="43.0" prefWidth="600.0" style="-fx-background-color: #D32F2F;">
+               <children>
+                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Skills">
+                     <font>
+                        <Font name="Segoe UI Light" size="18.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets top="7.0" />
+                     </HBox.margin>
+                  </Text>
+               </children>
+            </HBox>
+            <HBox alignment="TOP_CENTER" layoutX="10.0" layoutY="180.0" prefHeight="100.0" prefWidth="200.0">
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+               <children>
+                  <JFXTextArea fx:id="areaSkillsRequired" labelFloat="true" maxWidth="280.0" minWidth="280.0" prefHeight="120.0" prefWidth="280.0" promptText="Skills Required" />
+                  <JFXTextArea fx:id="areaSkillsObtained" labelFloat="true" layoutX="170.0" layoutY="10.0" maxWidth="280.0" minWidth="280.0" prefHeight="120.0" prefWidth="280.0" promptText="Skills Obtained" />
+               </children>
+            </HBox>
+            <HBox alignment="TOP_CENTER" layoutX="10.0" layoutY="280.0" prefHeight="70.0" prefWidth="200.0">
+               <children>
+                  <JFXButton fx:id="btnCreate" buttonType="RAISED" onAction="#handleCreate" prefHeight="39.0" prefWidth="118.0" style="-fx-background-color: #D32F2F;" text="Create" textFill="WHITE">
+                     <HBox.margin>
+                        <Insets right="15.0" top="10.0" />
+                     </HBox.margin>
+                  </JFXButton>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </center>
+</BorderPane>

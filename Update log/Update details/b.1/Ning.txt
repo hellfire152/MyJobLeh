@@ -1,0 +1,43 @@
+22/12/2016 - Qingning
+
+New file created: 
+DisplayEmployerFeedback.fxml
+DisplayEmployeeFeedback.java
+StatisticsBar.fxml
+StatisticsBarController.java
+StatisticsPie.fxml
+StatisticsPieController.java
+
+File edited: 
+
+
+Issue/Error:
+ still trying the dialog thing.
+ 
+ 25/12/2016 - Qingning
+
+New file created: 
+
+
+
+File edited: 
+Controller.employer
+ApplicationPageController.java
+AddApplicantPageController.java
+CreateJobController.java
+HomeController.java
+JobDetailsPageController.java
+ListOfEmployeesController.java
+
+dataAccess
+JobsDao.java
+AccountDAO.java
+
+dataAccess.sql
+AccountDAO_Sql.java
+JobsDAO_Sql.java
+
+model.event 
+WorkEvent.java
+
+Issue/Error:

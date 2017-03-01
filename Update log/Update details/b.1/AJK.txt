@@ -1,0 +1,34 @@
+22/1/2017, Ver b.1:
+
+Files renamed:
+ScreenOption.fxml -> EmployeeOrEmployer.fxml
+ScreenOptionController.java -> EmployeeOrEmployerController.java
+
+Files moved:
+	From Nigel's file:
+		>dataAccess subpackages removed
+			-DAO interfaces to dataAccess package
+			-Implementing classes to dataAccess.sql (new package)
+			
+			
+Files Changed:
+A LOT OF STUFF IN DATAACCESS //kill me now
+model.Validator::validatePassword -> '!', '^', '&', and '*' now all count as symbols!
+controller.LoginController::handleLogin + AccountDAO_Sql::getAccount + AccountDAO_Sql::createAccount ->
+now checks for an existing account before adding anything to the database
+
+JobsDAO_Sql::createAccount -> now checks for an existing job before adding to database
+JobsDAO_Sql::deleteJob -> now defined
+
+view.employee.Registraion.fxml -> because the fx:ids and stuff weren't set properly for some reason,
+probably something happened when we were handing files back and forth
+controller.employee.RegisterController.java -> Now properly adds an account to database, after checking if any accounts of that email exists
+
+Files Deleted:
+databaseAccess.Database.java
+databaseAccess.Employee.java
+databaseAccess.Employer.java
+
+New Files:
+DatabaseAccessor.java -> Abstract class for accessing the sql database
+

@@ -1,0 +1,47 @@
+/** {
+	-fx-border-color: red;
+	-fx-border-width: 1px;
+}*/
+
+.timetable {
+	-fx-background-color: white;	
+}
+
+.timetable-container {
+	-fx-translate-y: 20
+}
+
+.bordered-titled-title {
+  -fx-background-color: white;
+  -fx-translate-y: 10;
+}
+
+.bordered-titled-border {
+  -fx-content-display: top;
+  -fx-border-insets: 20 15 15 15;
+  -fx-background-color: white;
+  -fx-border-color: black;
+  -fx-border-width: 2;
+}
+
+.bordered-titled-content {
+  -fx-padding: 26 10 10 10;
+}
+
+.legendItem-border {
+	-fx-border-color: black;
+	-fx-border-width: 2px;
+}
+
+.timetable-cell, .timetable-dayLabel {
+	-fx-background-color: #FFF;
+	-fx-border-color: black;
+}
+
+.timetable-header {
+	-fx-background-color: #303f9f;
+}
+
+.timetable-header-title {
+	-fx-text-alignment: CENTER;
+}

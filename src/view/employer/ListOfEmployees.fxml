@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Display all the employee that the company have. used when the employee button is clicked, in the employer home page.
+	
+	Version: a, since a
+	Author: Nigel Chen Chin Hao
+-->
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXListView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #fff;" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.employer.ListOfEmployeesController">
+   <children>
+      <HBox prefHeight="53.0" prefWidth="600.0" style="-fx-background-color: #D32F2F;">
+         <children>
+            <JFXButton alignment="CENTER" onAction="#handleHome" prefHeight="59.0" prefWidth="33.0" text="&lt;" textFill="WHITE" />
+            <Label prefHeight="57.0" prefWidth="124.0" text="List of employee" textFill="WHITE">
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+               <padding>
+                  <Insets left="10.0" />
+               </padding></Label>
+            <Region prefHeight="42.0" prefWidth="355.0" HBox.hgrow="ALWAYS" />
+         </children></HBox>
+      <BorderPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: F44336;" VBox.vgrow="ALWAYS">
+         <left>
+            <AnchorPane maxWidth="1.7976931348623157E308" prefHeight="292.0" prefWidth="110.0" style="-fx-background-color: #D32F2F;" BorderPane.alignment="CENTER" />
+         </left>
+         <center>
+            <JFXListView fx:id="listEmployeeList" prefHeight="292.0" prefWidth="356.0" BorderPane.alignment="CENTER" />
+         </center>
+         <right>
+            <AnchorPane maxWidth="1.7976931348623157E308" prefHeight="292.0" prefWidth="110.0" style="-fx-background-color: #D32F2F;" BorderPane.alignment="CENTER" />
+         </right>
+      </BorderPane>
+      <HBox prefHeight="55.0" prefWidth="600.0" style="-fx-background-color: #F44336 #F44336;">
+         <children>
+            <JFXButton fx:id="btnDisplayInformation" buttonType="RAISED" maxWidth="1.7976931348623157E308" onAction="#handleDisplayInformation" prefHeight="55.0" prefWidth="556.0" style="-fx-background-color: #F44336;" text="Display information" textFill="WHITE" HBox.hgrow="ALWAYS">
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </HBox>
+   </children>
+</VBox>

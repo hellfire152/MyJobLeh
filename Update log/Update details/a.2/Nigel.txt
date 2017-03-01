@@ -1,0 +1,15 @@
+20/12/2016 - Nigel
+
+New file created: 
+DrawerHistory.fxml, DrawerHistoryController.java
+CheckTotalPayController.java
+SQL jar is added (Essential for database)
+
+File edited: 
+EmployeeHistoryCurrent/Pane
+EmployeeHistoryCurrent/Pane
+
+Issue/Error
+Unable to use swapscene in EmployeeHistoryCurrentPane and EmployeeHistoryPendingPane
+DrawerHistory is not able to use swapscene as well. 
+Please fix thank you very much =3

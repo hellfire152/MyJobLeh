@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- This is the register for employer 
+	Version: a , since a
+	Author: Bryan Tan 
+	-->
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.employer.RegisterController">
+   <top>
+      <HBox prefHeight="45.0" prefWidth="600.0" style="-fx-background-color: #D32F2F;" BorderPane.alignment="CENTER">
+         <children>
+            <JFXButton fx:id="backbtn" onAction="#handleBack" prefHeight="44.0" prefWidth="41.0" text="&lt;" textFill="WHITE" />
+            <Label prefHeight="43.0" prefWidth="117.0" text="Register" textFill="WHITE">
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin>
+            </Label>
+         </children>
+      </HBox>
+   </top>
+   <right>
+      <HBox alignment="TOP_CENTER" prefHeight="368.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <VBox alignment="TOP_CENTER" prefHeight="374.0" prefWidth="248.0" style="-: #4059a9;">
+               <children>
+                  <JFXTextField fx:id="fieldEmail" focusColor="#d32f2f" labelFloat="true" promptText="Email(Login ID)" unFocusColor="#f44336">
+                     <VBox.margin>
+                        <Insets top="15.0" />
+                     </VBox.margin>
+                  </JFXTextField>
+                  <JFXTextField fx:id="fieldName" focusColor="#d32f2f" labelFloat="true" maxWidth="248.0" minWidth="248.0" prefHeight="26.0" prefWidth="248.0" promptText="Name" unFocusColor="#f44336">
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </JFXTextField>
+                  <JFXPasswordField fx:id="fieldPassword" focusColor="#d32f2f" labelFloat="true" maxWidth="248.0" minWidth="248.0" prefHeight="26.0" prefWidth="248.0" promptText="Password" unFocusColor="#f44336">
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </JFXPasswordField>
+                  <JFXPasswordField fx:id="fieldConfirmPassword" focusColor="#d32f2f" labelFloat="true" promptText="Confirm Password" unFocusColor="#f44336">
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </JFXPasswordField>
+                  <JFXTextField fx:id="fieldNumber" focusColor="#f44336" labelFloat="true" layoutX="10.0" layoutY="66.0" promptText="Mobile Number" unFocusColor="#f44336">
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </JFXTextField>
+                  <JFXTextArea fx:id="areaAddress" prefHeight="36.0" promptText="Address" />
+                  <JFXTextArea fx:id="areaAbout" layoutX="10.0" layoutY="220.0" prefHeight="36.0" promptText="About" />
+                  <HBox prefHeight="43.0" prefWidth="271.0">
+                     <children>
+                        <JFXRadioButton fx:id="radiobtnMale" text="Male">
+                           <HBox.margin>
+                              <Insets left="5.0" right="5.0" top="10.0" />
+                           </HBox.margin>
+                           <toggleGroup>
+                              <ToggleGroup fx:id="Gender" />
+                           </toggleGroup>
+                        </JFXRadioButton>
+                        <JFXRadioButton fx:id="radiobtnFemale" text="Female" toggleGroup="$Gender">
+                           <HBox.margin>
+                              <Insets left="10.0" top="10.0" />
+                           </HBox.margin>
+                        </JFXRadioButton>
+                     </children>
+                  </HBox>
+                    <HBox>
+                   <children>
+                        <HBox />
+                        <ImageView fx:id="captchaImage" fitHeight="35.0" fitWidth="138.0" pickOnBounds="true" preserveRatio="true" />
+                        <JFXTextField fx:id="captchaAnswer" />
+                     </children>
+                  </HBox>
+                  <JFXButton fx:id="btnRegister" buttonType="RAISED" onAction="#handleRegister" prefHeight="39.0" prefWidth="125.0" style="-fx-background-color: #D32F2F;" text="Register" textFill="WHITE">
+                     <padding>
+                        <Insets top="5.0" />
+                     </padding>
+                  </JFXButton>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </right>
+</BorderPane>

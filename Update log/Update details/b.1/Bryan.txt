@@ -1,0 +1,14 @@
+Changed:
+Home.fxml
+HomeController
+Profile.fxml
+ProfileController
+
+Added:
+HomePaneController
+HomePane.fxml
+ScreenOption.fxml
+ScreenOptionController.java
+
+Issue:
+Don't know what kind of data should i have in my model classes for profile

@@ -1,0 +1,216 @@
+Update Notes (a -> alpha, b -> beta, rc -> release candidate) "TODO::" marks the most important task at the time 
+This is maintained by Ang Jin Kuan, group leader. For detailed info, check the "Update details" folder.
+
+Before 13/12/2016, UI components were designed separately
+
+-------------------------------------------------------------------------------------------------------------
+
+13/12/2016 - Ver a.1:
+All UI components/controllers were tossed together. Links to resources and between
+FXML and their associated controllers are working, swapScene method is working,
+Domain classes are barely written.
+
+There is no functionality on most of the controllers. Most buttons do not do anything
+and are for show till later updates. Components have to be independently tested.
+
+As for data access, Nigel has done some test programs, but not much else can be done
+when the domain classes are still basically blank.
+
+TODO::Get most of the buttons working!
+
+-------------------------------------------------------------------------------------------------------------
+
+24/12/2016 - Ver a.2:
+The buttons and linking are mostly working, thanks to the hard work of the others in the group!
+
+First up is the change that's immediately noticable: the restructuring of the files!
+I got sick of seeing a bajillion files in one package, with the longest names, so
+I went ahead and created new subpackages to further organize all of that stuff.
+The "Employee" and "Employer" prefixes have also been removed, as they are reflected in the package name.
+This only affected the controller and view packages.
+All relevant links have been updated to reflect this change.
+
+I rewrote a lot of how the linking between the main app and the controllers worked.
+It used to be that a setMainApp method was called from the swapScene method,
+but that causes issues with loading a scene with/into another one, as I found out with
+Qing Ning's case (employer home).
+
+The solution is in two parts:
+MyJobLeh now has a private static reference of itself, accessed using the getInstance() method.
+Controller is now an abstract class, with the reference for the main app set in a constructor block.
+All controllers now extend Controller, naturally.
+The result of this is that the controllers will all be automatically linked to the main app.
+The methods setMainApp and getMainApp has hence been removed.
+
+A new method was also written, getScene(String location) in MyJobLeh, that returns a FXMLLoader.
+Really it's just a bit of shorthand to make code shorter and easier to understand.
+
+Nigel has got the database working, just missing the model classes, methods, and DAO
+classes to get the thing fully up, working, and integrated into the program.
+It's just that, that's a lot of work...
+He's got file storage figured out too, so that'll be a great help.
+
+A css folder was created, and swapScene now supports adding css too.
+This is in preparation for the css stuff Bryan is going to bring in,
+including a alternate dark theme for the program, and removing redundant
+FXML files using the css (more boring, that one)
+
+All in all, a lot was done! Now it's time to write the all-important model files!
+
+TODO::Write up the model files, for accounts and events
+
+-------------------------------------------------------------------------------------------------------------
+
+1/1/2017 Ver. a.3:
+The model files have been written, for the most part. I'm still unsure if inside is what we need
+
+Nigel has done some chat stuff, which will be completely irrelevant until near the end. Welp.
+He has also added plenty of stuff inside the dataAccess package, although I'm not really checking
+those right now.
+
+The registration and feedback forms are mostly working, thanks to Qing Ning. I say "working", but the
+forms don't submit anywhere. The database linking is up to Nigel, after all. Right now, the submit button
+and all the various validation functions are working (without error messages), and the handler gets
+all the text input correctly.
+
+A few things have been added, including the Session class, for holding the current account and theme info
+and the theme itself, which is a kinda blank enum right now. It honestly might have to be removed if we don't
+have enough time to add themes in by the end of this project.
+
+Speaking of enums I don't know what to do with, model.account.Availability is another one.
+Don't know why I created it, but whateverrrrrrrrrrrrrr.
+
+I updated by timetable a little bit, it now can take in ScheduledEvents, but doesn't do much with them.
+
+This might be the most unsure and ambiguous update of this project, since we haven't really strictly defined
+anything. All I know is to just keep trucking along!
+
+TODO::DAO nonsense
+
+-------------------------------------------------------------------------------------------------------------
+
+23/1/2017 Ver b.1:
+
+DATABASE RUBBISH IS WORKING!!! YASSSSSSSSSSSSSSSSSSSSSSSSS
+*cough* *cough*
+
+Anyway, I felt that that working was big enough of an excuse to finally move us to the fabled "beta" stage!
+I had to link up everything, and rearrange much (all) of Nigel's code. I was only concerned with getting
+the accountDAO, and Session to work. The rest should fall into place after that's done.
+
+I have not implemented Nigel's chat or email stuff, nor Qing Ning's feedback yet, since those are small 
+features that I'm not bothering with until all my main features are all working nicely.
+
+There's a lot of logic related to jobs and the associated database table, but none of it's tested yet.
+
+I'm experimenting with how to get/set the employee pending and accepted lists. I'm trying an ArrayList<String>
+to store the jobs for each employee, but I couldn't get the ArrayList object for some reason. I might have
+to rework this sometime in the future.
+
+For now, I'm glad that all account matters are A.OK! (for the dao side, at least)
+(also that I finally have the beginning select screen in the form of EmployeeOrEmployer thanks to Bryan)
+
+TODO::JOBS DAO + all the dynamic stuff that comes from that
+
+----------------------------------------------------------------------------------------------------------------
+
+27/1/2017 Ver b.3:
+
+JOBS DAO IS WORKING!! yea booooooooooooooooooooooooooiiiiiii
+
+As per the last update said, I really had to rework how the database tables are laid out:
+"pending_employees" and "accepted_employees" columns in the "jobs" table have been removed, replaced by some
+new fangled JUNCTION TABLES! Those where quite a pain to learn, had to learn all the various SQL syntax like
+JOIN ON, CROSS JOIN, AND, IN, AS, and some nested searchy things (professional, I know).
+
+Found out that we didn't have to change objects to byte arrays when storing them in the database, and I decided
+to put a bytesToObject method in the databaseAccessor abstract class, so the DAO methods are now far shorter and
+easier to understand. Why didn't we do that sooner?
+
+Created a new package (yes, yet MORE PACKAGES), model.extraWindows
+This one stores any function and their classes that launch a new window. There's only one example of that right
+now, ApplyJob. Speaking of ApplyJob, it's working! Took me a long while, but after all the above changes,
+such things are now possible.
+
+swapScene now returns the Controller. Now we can pass info via the next scene's controller's methods.
+Came up with this while I was helping Chloe with her memories page; helping people is good after all.
+
+For this update I focused intensely on making the job DAO working based on the junction tables, so not much
+other activity elsewhere
+
+Nigel and Bryan are busy doing their features together. They're redesigning a lot of the employee side pages, 
+and including a map feature when applying for a job. That's all cool, but they're currently focusing on the
+technical review more than integrating those parts into our project, so I'm unable to reflect those changes
+just yet.
+
+(Qing Ning will have to rewrite her pages though)
+
+TODO::The various dynamically generated pages, for both employee and employer that rely on the job DAO
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+pt.2 31/1/2017 Ver. b.2.2:
+
+Integrated Qing Ning's parts into the main project file. The process from creating job, applying job, accepting
+job, and displaying job is now fully working!
+
+TODO::Get Nigel's and Bryan's parts working! (I first need the file to even start...)
+
+------------------------------------------------------------------------------------------------------------------
+
+1/2/2017 Ver b.3
+We're on the final stretch!
+
+Qing Ning has only minor additions to make, notably the resigned employees/ past employees information (with it's
+associated database tables) and the Feedback DAO and display, which are done but not implemented.
+She also has Statistics working! I still have to find out what statistics it displays though.
+
+Nigel and Bryan's employee side is working for the most part, but I'll have to redesign a few
+things, namely the skills adding, status display (remove), past work experience, and highest qualifications.
+Thankfully it'll be easy, as they've done a lot of the brunt work. Their new drawer and linking between
+pages are all working! Quite happy about that one.
+
+The chat, email, and file transfer functions I have yet to import all the needed .jar files, as I've been busy.
+I rewrote a lot of the how the employee side pages worked. Only the pane generation and
+initialization though. Nigel used Session and a counter, which are difficult to understand in my opinion (Session
+not so much, counter a lot). I edited it to fit the "baton-passing" style of doing it, which is much better IMO.
+They should all work the instant I drag the apis in though, so that's good!
+
+I only have minor stuff to do, mostly quality-of-life changes, so I'm in a pretty good spot as well.
+Hopefully, everything's perfect by Saturday!
+
+TODO::All the various small additions and quality-of-life improvements!
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+4/2/2017 Ver b.3.2
+Phew... everything/body is rushing so much, sure is taking a lot out of me.
+I was forced to delegate the group poster back to Nigel. Not proud of that, but if I didn't I'd run out of time.
+
+Anyway,
+The first thing I'd like to say is... error popup is finally done! I've been asking Qing Ning and Bryan for
+something like this for a while, but they've been so focused on their own parts that has been shafted for the
+longest time.
+
+Second, profile pictures now work through the database! With that, a default profile picture has been added.
+I've used Nigel's ImageUpload class in the dataAccess package to make it simpler to get any
+images I need.
+
+Third, Timetable now handles conflicts in a better way! Now with a sick exclamation mark image while displaying
+the number of conflicting events.
+
+Fourth, remember I said I had to redesign some things above? Well I went ahead and did that. It took me a whole
+dang afternoon, but they work! yaaaaaaaaaaaaaaaaaaaay.
+
+All of their parts and jar files are FINALLY imported into my main project folder. They didn't actually need
+all of those 50 billion jar files...... I think. I haven't tested anything, only settled all the import errors.
+
+It's going to end soon, this project. Can't wait till then!
+
+----------------------------------------------------------------------------------------------------------------
+
+5/2/2017 Ver. final
+The final version.
+
+Most of the changes from the previous version to this are minor changes/ bug fixes. Everything we need to work
+is working. Now all that's left is the final presentation.

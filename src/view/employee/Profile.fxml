@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import application.Card?>
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDrawer?>
+<?import com.jfoenix.controls.JFXHamburger?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.employee.ProfileController">
+   <children>
+      <StackPane fx:id="stackPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity">
+         <children>
+            <ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="600.0">
+               <content>
+                  <VBox>
+                     <children>
+                        <HBox prefHeight="45.0" prefWidth="585.0" style="-fx-background-color: #303f9f;">
+                           <children>
+                              <JFXButton onAction="#loadBack" prefHeight="48.0" prefWidth="50.0" text="&lt;" textFill="WHITE" />
+                              <Label prefHeight="45.0" prefWidth="103.0" text="My Profile" textFill="WHITE">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                              <Region HBox.hgrow="ALWAYS" />
+                              <JFXHamburger fx:id="fxHamburg" alignment="CENTER_RIGHT" HBox.hgrow="ALWAYS">
+                                 <HBox.margin>
+                                    <Insets right="10.0" />
+                                 </HBox.margin>
+                              </JFXHamburger>
+                           </children>
+                        </HBox>
+                        <Card prefHeight="229.0" prefWidth="585.0">
+                           <children>
+                              <VBox prefHeight="200.0" prefWidth="100.0">
+                                 <children>
+                                    <Pane prefHeight="60.0" prefWidth="585.0" style="-fx-background-color: #3f51b5;">
+                                       <children>
+                                          <Label layoutX="14.0" layoutY="8.0" text="Personal Details" textFill="WHITE">
+                                             <font>
+                                                <Font size="16.0" />
+                                             </font>
+                                          </Label>
+                                          <JFXButton layoutX="511.0" layoutY="8.0" onAction="#loadPersDialog" prefHeight="25.0" prefWidth="60.0" style="-fx-background-color: #9FA8DA;" text="Edit">
+                                             <graphic>
+                                                <FontAwesomeIconView glyphName="EDIT" size="14" />
+                                             </graphic>
+                                          </JFXButton>
+                                       </children>
+                                    </Pane>
+                                    <Pane prefHeight="201.0" prefWidth="585.0" style="-fx-background-color: #eeeeee;">
+                                       <children>
+                                          <Text fill="#303f9f" layoutX="14.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Date Of Birth">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </Text>
+                                          <Label fx:id="lbDOB" layoutX="16.0" layoutY="45.0" text="Label" />
+                                          <Text fill="#303f9f" layoutX="179.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Gender">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </Text>
+                                          <Text fill="#303f9f" layoutX="16.0" layoutY="89.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Status">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </Text>
+                                          <Text fill="#303f9f" layoutX="179.0" layoutY="89.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mobile">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </Text>
+                                          <Label fx:id="lbGender" layoutX="184.0" layoutY="45.0" text="Label" />
+                                          <Label fx:id="lbStatus" layoutX="16.0" layoutY="104.0" text="Label" />
+                                          <Label fx:id="lbMobile" layoutX="184.0" layoutY="104.0" text="Label" />
+                                          <ImageView fx:id="imageProfile" fitHeight="109.0" fitWidth="120.0" layoutX="345.0" layoutY="8.0" />
+                                          <Label fx:id="lbName" layoutX="386.0" layoutY="130.0" text="Name" textAlignment="CENTER" textFill="#303f9f">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <JFXButton fx:id="uploadButton" layoutX="497.0" layoutY="50.0" onAction="#uploadPicture" style="-fx-background-color: #9FA8DA;" text="Upload">
+                                             <graphic>
+                                                <FontAwesomeIconView glyphName="UPLOAD" size="15" wrappingWidth="15.0" />
+                                             </graphic>
+                                          </JFXButton>
+                                          <Label fx:id="lbRating" layoutX="19.0" layoutY="140.0" text="Label" textFill="#303f9f">
+                                             <graphic>
+                                                <FontAwesomeIconView fill="#303f9f" glyphName="STAR" size="14" />
+                                             </graphic>
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </Pane>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </Card>
+                        <Card prefHeight="177.0" prefWidth="585.0">
+                           <children>
+                              <VBox prefHeight="200.0" prefWidth="100.0">
+                                 <children>
+                                    <Pane prefHeight="60.0" prefWidth="585.0" style="-fx-background-color: #3f51b5;">
+                                       <children>
+                                          <Label layoutX="14.0" layoutY="11.0" text="About Me" textFill="WHITE">
+                                             <font>
+                                                <Font size="16.0" />
+                                             </font>
+                                          </Label>
+                                          <JFXButton layoutX="511.0" layoutY="9.0" onAction="#loadAboutMe" prefHeight="25.0" prefWidth="60.0" style="-fx-background-color: #9FA8DA;" text="Edit">
+                                             <graphic>
+                                                <FontAwesomeIconView glyphName="EDIT" size="14" />
+                                             </graphic>
+                                          </JFXButton>
+                                       </children>
+                                    </Pane>
+                                    <Pane prefHeight="151.0" prefWidth="585.0" style="-fx-background-color: #eeeeee;">
+                                       <children>
+                                          <Label fx:id="lbAboutMe" layoutX="23.0" prefHeight="54.0" prefWidth="538.0" text="Tell us about youself .Why should a company hire you? Describe your key experience, strengths, personality" textAlignment="CENTER" wrapText="true">
+                                             <padding>
+                                                <Insets left="10.0" right="10.0" top="10.0" />
+                                             </padding>
+                                          </Label>
+                                       </children>
+                                    </Pane>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </Card>
+                        <Card prefHeight="120.0" prefWidth="585.0">
+                           <children>
+                              <VBox prefHeight="108.0" prefWidth="585.0">
+                                 <children>
+                                    <Pane prefHeight="48.0" prefWidth="585.0" style="-fx-background-color: #3f51b5;">
+                                       <children>
+                                          <Label layoutX="14.0" layoutY="12.0" text="Highest Education" textFill="WHITE">
+                                             <font>
+                                                <Font size="16.0" />
+                                             </font>
+                                          </Label>
+                                          <JFXButton layoutX="511.0" layoutY="12.0" onAction="#loadHighestEdu" prefHeight="25.0" prefWidth="60.0" style="-fx-background-color: #9FA8DA;" text="Edit">
+                                             <graphic>
+                                                <FontAwesomeIconView glyphName="EDIT" size="14" />
+                                             </graphic>
+                                          </JFXButton>
+                                       </children>
+                                    </Pane>
+                                    <Pane fx:id="qualificationFlowPane" prefHeight="70.0" prefWidth="585.0">
+                                       <children>
+                                          <Label fx:id="lbHighestEdu" layoutX="75.0" layoutY="21.0" prefHeight="28.0" prefWidth="297.0" text="Label">
+                                             <font>
+                                                <Font size="15.0" />
+                                             </font>
+                                          </Label>
+                                          <FontAwesomeIconView glyphName="BOOK" layoutX="28.0" layoutY="42.0" size="21" />
+                                       </children>
+                                    </Pane>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </Card>
+                        <Card prefHeight="177.0" prefWidth="585.0">
+                           <children>
+                              <VBox prefHeight="177.0" prefWidth="585.0">
+                                 <children>
+                                    <Pane prefHeight="48.0" prefWidth="585.0" style="-fx-background-color: #3f51b5;">
+                                       <children>
+                                          <Label layoutX="14.0" layoutY="12.0" text="Skills" textFill="WHITE">
+                                             <font>
+                                                <Font size="16.0" />
+                                             </font>
+                                          </Label>
+                                          <JFXButton layoutX="511.0" layoutY="12.0" onAction="#loadSkills" prefHeight="25.0" prefWidth="60.0" style="-fx-background-color: #9FA8DA;" text="Edit">
+                                             <graphic>
+                                                <FontAwesomeIconView glyphName="EDIT" size="14" />
+                                             </graphic>
+                                          </JFXButton>
+                                       </children>
+                                    </Pane>
+                                    <FlowPane fx:id="skillsDisplay" prefHeight="129.0" prefWidth="222.0" VBox.vgrow="ALWAYS" />
+                                 </children>
+                              </VBox>
+                           </children>
+                        </Card>
+                        <Card prefWidth="585.0">
+                           <children>
+                              <VBox prefWidth="100.0">
+                                 <children>
+                                    <Pane prefHeight="58.0" prefWidth="200.0" style="-fx-background-color: #3f51b5;">
+                                       <children>
+                                          <Label layoutX="14.0" layoutY="12.0" text="Experience" textFill="WHITE">
+                                             <font>
+                                                <Font size="16.0" />
+                                             </font>
+                                          </Label>
+                                          <JFXButton layoutX="511.0" layoutY="17.0" onAction="#loadExperience" prefHeight="25.0" prefWidth="60.0" style="-fx-background-color: #c5cae9;" text="Edit">
+                                             <graphic>
+                                                <FontAwesomeIconView glyphName="EDIT" size="14" />
+                                             </graphic>
+                                          </JFXButton>
+                                       </children>
+                                    </Pane>
+                                    <Pane prefWidth="585.0" style="-fx-background-color: #eeeeee;" VBox.vgrow="ALWAYS">
+                                       <children>
+                                          <VBox fx:id="appendExperience" layoutY="96.0" prefWidth="585.0" />
+                                       </children>
+                                    </Pane>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </Card>
+                        <HBox alignment="CENTER" prefHeight="40.0" prefWidth="585.0">
+                           <children>
+                              <Pane prefHeight="38.0" prefWidth="585.0">
+                                 <children>
+                                    <JFXButton fx:id="btnGenerate" layoutX="239.0" layoutY="1.0" onAction="#handleGenerate" prefHeight="38.0" prefWidth="108.0" style="-fx-background-color: #3f51b5;" text="Generate" textFill="WHITE" />
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets top="10.0" />
+                                 </HBox.margin>
+                              </Pane>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </content>
+            </ScrollPane>
+         </children>
+      </StackPane>
+      <JFXDrawer fx:id="fxDrawer" prefHeight="600.0" prefWidth="0.0" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import application.Card?>
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDrawer?>
+<?import com.jfoenix.controls.JFXHamburger?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.employer.ProfileController">
+   <children>
+      <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="600.0">
+         <children>
+            <HBox prefHeight="45.0" prefWidth="585.0" style="-fx-background-color: #D32F2F;">
+               <children>
+                  <JFXHamburger fx:id="fxHamburg">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </JFXHamburger>
+                  <Label alignment="CENTER" prefHeight="46.0" prefWidth="83.0" text="Profile" textFill="#fccdd2" />
+               </children>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+               <children>
+                  <StackPane fx:id="stackPaneEditCompany" prefHeight="150.0" prefWidth="200.0">
+                     <children>
+                        <Card>
+                           <children>
+                              <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0">
+                                 <children>
+                                    <Pane prefHeight="200.0" prefWidth="200.0">
+                                       <children>
+                                          <ImageView fx:id="profilePicView" fitHeight="150.0" fitWidth="173.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" />
+                                          <JFXButton fx:id="uploadBtn" layoutX="135.0" layoutY="174.0" onAction="#handleImageUpload" text="Upload" />
+                                       </children>
+                                    </Pane>
+                                    <Label fx:id="lbName" text="Name of company">
+                                       <VBox.margin>
+                                          <Insets bottom="10.0" top="15.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                    <Label fx:id="lbContact" text="Contact Number">
+                                       <VBox.margin>
+                                          <Insets bottom="10.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                    <Label fx:id="lbAddress" text="Address" />
+                                    <Pane prefHeight="71.0" prefWidth="200.0">
+                                       <children>
+                                          <JFXButton fx:id="btnEditCompanyDetails" layoutX="142.0" layoutY="23.0" onAction="#handleEditCompanyDetails" style="-fx-background-color: #fccdd2;" text="Edit" />
+                                       </children>
+                                    </Pane>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </Card>
+                     </children>
+                  </StackPane>
+                  <StackPane fx:id="stackPaneEditAbout" prefHeight="150.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <Card>
+                           <children>
+                              <VBox prefHeight="200.0" prefWidth="100.0">
+                                 <children>
+                                    <Pane prefHeight="65.0" prefWidth="400.0" style="-fx-background-color: #f44336;">
+                                       <children>
+                                          <Text fill="WHITE" layoutX="165.0" layoutY="39.0" strokeType="OUTSIDE" strokeWidth="0.0" text="About Us">
+                                             <font>
+                                                <Font name="Segoe UI Light" size="18.0" />
+                                             </font>
+                                          </Text>
+                                          <JFXButton fx:id="btnEditAbout" layoutX="341.0" layoutY="20.0" onAction="#handleEditAbout" style="-fx-background-color: #fccdd2;" text="Edit" />
+                                       </children>
+                                    </Pane>
+                                    <Card VBox.vgrow="ALWAYS">
+                                       <children>
+                                          <FlowPane alignment="TOP_CENTER" prefHeight="200.0" prefWidth="200.0">
+                                             <children>
+                                                <Label fx:id="lbAbout" text="Label" />
+                                             </children>
+                                          </FlowPane>
+                                       </children>
+                                    </Card>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </Card>
+                     </children>
+                  </StackPane>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <JFXDrawer fx:id="fxDrawer" defaultDrawerSize="190.0" prefWidth="0.0" />
+   </children>
+</AnchorPane>

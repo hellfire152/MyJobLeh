@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Show the details of the current job they are taking, this is a individual pane for the employee history current. 
+
+	Version: a, since a
+	Author: Nigel Chen Chin Hao
+-->
+
+<?import application.Card?>
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<StackPane fx:id="stackPane" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.employee.HistoryCurrentPaneController">
+   <children>
+      <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="241.0" prefWidth="426.0">
+         <children>
+            <Card HBox.hgrow="ALWAYS">
+               <children>
+                  <VBox prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <HBox alignment="CENTER_LEFT" prefHeight="36.0" prefWidth="426.0" style="-fx-background-color: #303f9f;">
+                           <children>
+                              <Label fx:id="lbJobName" text="&quot;Job name&quot;" textFill="WHITE">
+                                 <HBox.margin>
+                                    <Insets left="15.0" />
+                                 </HBox.margin>
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+                           <children>
+                              <AnchorPane prefHeight="205.0" prefWidth="192.0" style="-fx-background-color: #FFF;" HBox.hgrow="ALWAYS">
+                                 <children>
+                                    <Label fx:id="lbManagerName" layoutX="46.0" layoutY="48.0" text="&quot;Manager name&quot;">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="lbHourlyRate" layoutX="46.0" layoutY="76.0" text="&quot;Hourly rate&quot;">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="lbContact" layoutX="46.0" layoutY="103.0" text="&quot;Contact&quot;">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </AnchorPane>
+                              <VBox alignment="CENTER" prefHeight="205.0" prefWidth="80.0" style="-fx-background-color: #4059a9;">
+                                 <children>
+                                    <JFXButton fx:id="btnCheckTotalPay" onAction="#handleCheckTotalPay" prefHeight="51.0" prefWidth="78.0" ripplerFill="WHITE" style="-fx-background-color: #4059a9;" text="Check total pay" textAlignment="CENTER" textFill="WHITE" wrapText="true" />
+                                    <JFXButton fx:id="btnRetire" onAction="#handleRetire" prefHeight="51.0" prefWidth="78.0" ripplerFill="WHITE" style="-fx-background-color: #4059a9;" text="Retire" textAlignment="CENTER" textFill="WHITE" wrapText="true" />
+                                    <JFXButton fx:id="btnChat" onAction="#handleChat" prefHeight="51.0" prefWidth="78.0" ripplerFill="WHITE" style="-fx-background-color: #4059a9;" text="Chat" textAlignment="CENTER" textFill="WHITE" wrapText="true" />
+                                    <JFXButton fx:id="btnFileTransfer" onAction="#handleFileTransfer" prefHeight="51.0" prefWidth="78.0" ripplerFill="WHITE" style="-fx-background-color: #4059a9;" text="File transfer" textAlignment="CENTER" textFill="WHITE" wrapText="true" />
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+            </Card>
+         </children>
+         <padding>
+            <Insets bottom="10.0" top="5.0" />
+         </padding>
+      </HBox>
+   </children>
+</StackPane>

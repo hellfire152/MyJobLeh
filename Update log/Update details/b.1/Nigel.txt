@@ -1,0 +1,30 @@
+15/1/17 Nigel
+
+___UPDATES____
+Object are all able to uploaded to the database.
+Now is just trying to finish up qing ning database thing - will finish it after all the test is over
+I have implemented a email function, good and up in running. - waiting for bryan to help me create the FXML of this email
+Account DAO is mostly done - I THINK
+File transfer is all good.
+Database is updated.
+Lots of jar files added.
+
+
+____ISSUE____
+Unable to create a reference email in UserAccount.java so that all the other class and packages can access the static email where email is from the user login.
+History pending is unable to delete pane on the spot, need to reload program
+
+22/1/2017
+Data access
+Database updated
+account DAO created
+-- having issue with deleting account (Will fix this soon)
+chat DAO created
+Feedback DAO created - For ning
+Jobs DAO created - For ning and bryan
+
+Email class have not been change
+
+---Issue---
+Account unable to set object when officially logged in
+In fact, the log in button does not work... =_=

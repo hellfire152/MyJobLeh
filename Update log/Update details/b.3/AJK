@@ -1,0 +1,56 @@
+2/1/2017 Ver b.3:
+Files edited:
+In controller.employee:
+	>HistoryCurrentController, HistoryCurrentPaneController,
+	HistoryPastJobsController, HistoryPastJobsPaneController,
+	HistoryPendingController, HistoryPendingPaneController,
+	HomeController, HomePaneController, ChatController
+	EditPersonalDialogController, CheckTotalPayDialogController,
+	FileTransferController, FileTransferDownloadController
+		-->All changed so that they use the "baton-passing" logic
+		
+	>ProfileController
+		-->Mostly minor changes, one notable being profile pic swapped to database version
+	>AccountDAO, AccountDAO_Sql
+		-->Added getProfilePic, setProfilePic methods, to store and get profile pics from the (sql) database
+		
+model.account.EmployeeAccount:
+	-->Implemented Bryan's ratings, with a few changes
+	
+dataAccess:
+	>ImageUpload
+	 	-->added a bunch of convenience methods for getting certain images
+	
+Files moved:
+	>DrawerController
+		-->From controller to employee.controller
+		
+Files added:
+model.extraWindows:
+	>ChatWindow
+		-->Chat now opens in a new window!
+	>ErrorPopup
+		-->Now actually exists!
+	>ConfirmBox
+		-->For are you sure? displays
+	
+Files deleted:
+model:
+	>Theme
+		-->I doubt we'll have the time to do this anymore
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+4/2/2017 Ver b.3.2
+Files edited:
+In controller.employee:
+	>ProfileController
+		-->Reworked skills display and experience display
+		-->Rating now checks whether there has been any ratings so far
+	>ApplyJob + extraWindows.MapWindow
+		-->Now properly done. but I can't find the display maps button anywhere
+		
+DRAWERS NEEDED:
+employee.FileTransfer
+employee.ProfileTimetable
+employee.Feedback

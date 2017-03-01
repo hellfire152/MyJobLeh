@@ -1,0 +1,27 @@
+ 25/12/2016 - Qingning
+
+New file created: 
+
+File edited: 
+Controller.employer
+ApplicationPageController.java
+AddApplicantPageController.java
+CreateJobController.java
+HomeController.java
+JobDetailsPageController.java
+ListOfEmployeesController.java
+ApplyJob.fxml
+ApplyJobController.java
+
+dataAccess
+JobsDao.java
+AccountDAO.java
+
+dataAccess.sql
+AccountDAO_Sql.java
+JobsDAO_Sql.java
+
+model.event 
+WorkEvent.java
+
+Issue/Error:
